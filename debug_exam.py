@@ -1,4 +1,3 @@
-'''
 This function takes two arguments,
 data1 and data2, which contain
 key-value pairs. All key-value
@@ -50,9 +49,9 @@ def uniqueUpdate(data1, data2):
                 dupKeys[k] = [v1, v2]
                 # Remove (k, v1) from data1
                 del data1[k]
-            else:
-                # Add (k, v2) to data1
-                data1[k] = v2
+        else:
+            # Add (k, v2) to data1
+            data1[k] = v2
     # After processing all (k, v2) in
     # data2, return the dictionary
     return dupKeys
@@ -92,7 +91,7 @@ dup (the dictionary returned)
 '''
 
 import sys
-if __name__ == '__main__':
+if _name_ == '_main_':
     data1 = {}
     n1 = int(input())
     for _ in range(n1):
@@ -112,3 +111,47 @@ if __name__ == '__main__':
     print(data1)
     print(data2)
     print(dup)
+
+'''
+5)a)Input
+3
+1 2
+2 2
+8 7
+2
+3 3
+2 9
+The ouput had to be
+{1:2,8:7,3:3}
+[[3,3],[2,9]]
+{2,[2,9]}
+but this is not what we get.
+
+5)b)There is Indentention Error at line 53.If the error is corrected then the cod will be read/run.
+
+5)c)
+(I)Input 
+n1=3
+1 2
+2 2
+9 4
+n2=2
+3 3
+1 4
+expected output
+{2:2,9:4,3:3}
+[[3,3],[1,4]]
+{1:[2,4]}
+
+(i i)
+n1=2
+1 2
+2 4
+n2=2
+3 4
+2 5
+expected output
+{2:4,3:4}
+[[3,4],[2,5]]
+{2:[4,5]}
+'''
